@@ -23,6 +23,7 @@ function addTask(){
 
     </div>`;
     document.getElementById("tasks-list").appendChild(newListItem);
+    alert("Task Added")
     toggleAddTaskMenu();
     id++;
     
@@ -30,6 +31,7 @@ function addTask(){
 function edit(id){
     b=!b;
    document.getElementById(`task-${id}`).setAttribute("contenteditable" , b);
+   alert("Task Edited");
    if(b===true){
     document.getElementById(`edit-${id}`).innerHTML = "Done"
    }
@@ -39,4 +41,5 @@ function edit(id){
 }
 function deleteItem(id){
     document.getElementById(`item-${id}`).remove();
+    alert("Task Removed")
 }
